@@ -2,7 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var length = parseInt(prompt("Please enter password. Must be at least 8 characters and no more than 128 characters:"));
+  var length = parseInt(prompt("Welcome! Please enter at least 8 characters and no more than 128 characters to generate password:"));
+  var uppercase = confirm("Would you like uppercase letters? Click OK to continue");
+  var lowercase = confirm("Would you like lowercase letters? Click OK to continue");
 
   //1. Prompt user for PW criteria
   //   a. PW length at least 8 characters and no more than 128 characters
