@@ -2,11 +2,19 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var length = parseInt(prompt("Welcome! Please enter at least 8 characters and no more than 128 characters to generate password:"));
-  var uppercase = confirm("Would you like uppercase letters? Click OK to continue");
-  var lowercase = confirm("Would you like lowercase letters? Click OK to continue");
-  var symbols = confirm("Would you like symbols? Click OK to continue");
-  var numbers = confirm("Would you like numbers? Click OK to continue");
+  var length = parseInt(prompt("Welcome! Please choose a length of at least 8 characters and no more than 128 characters:"));
+  if (isNaN(length) || length < 8 || length > 128) {
+    alert("Password length should be a number between 8 and 128 characters. Please try again:");
+    return generatePassword();
+  } else {
+    var useUppercase = confirm("Do you want to include uppercase letters?");
+    var useLowercase = confirm("Do you want to include lowercase letters?");
+    var useNumbers = confirm("Do you want to include numbers?");
+    var useSymbols = confirm("Do you want to include symbols?");
+  
+   
+  }
+ 
 
   //1. Prompt user for PW criteria
   //   a. PW length at least 8 characters and no more than 128 characters
