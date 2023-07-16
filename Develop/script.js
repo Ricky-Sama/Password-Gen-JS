@@ -3,6 +3,7 @@ var lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 var numbers = ['1','2','3','4','5','6','7','8','9','0']
 var specialChar = ['!','@','#','$','%','^','&','*','(',')','_','+','~','<','>','?']
 
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -18,14 +19,14 @@ function generatePassword() {
     return null;
   }
   
-  else {
+  
     var useUppercase = confirm("Do you want to include uppercase letters?");
     var useLowercase = confirm("Do you want to include lowercase letters?");
     var useNumbers = confirm("Do you want to include numbers?");
     var useSymbols = confirm("Do you want to include symbols?");
   
    
-  }
+  
  
 
   //1. Prompt user for PW criteria
