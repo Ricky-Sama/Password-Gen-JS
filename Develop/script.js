@@ -24,19 +24,28 @@ function generatePassword() {
     var useLowercase = confirm("Do you want to include lowercase letters?");
     var useNumbers = confirm("Do you want to include numbers?");
     var useSymbols = confirm("Do you want to include symbols?");
-  
+    var userPicks = [];
+
+    if (useUppercase) {
+      userPicks = userPicks.concat(upperCase);
+    }
    
-  
- 
+    if (useLowercase) {
+      userPicks = userPicks.concat(lowerCase);
+    }
 
-  //1. Prompt user for PW criteria
-  //   a. PW length at least 8 characters and no more than 128 characters
-  //   b. Uppercase, lowercase, numbers, special characters
-  //2. Validate the input.
-  //3. Generate PW based on criteria.
+    if (useNumbers) {
+      userPicks = userPicks.concat(numbers);
+    }
 
+    if (useSymbols) {
+      userPicks = userPicks.concat(specialChar);
+    }
   
-  //4. Display PW to the page.
+    for(var i = 0; i < length; i++) {
+        var randomCharacter = Math.floor(Math.random() * userPicks.length)
+    }
+
   
 }
 
